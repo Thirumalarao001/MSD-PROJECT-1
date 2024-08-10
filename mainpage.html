@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>THIRU</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+    <style>
+        html{
+            scroll-behavior: smooth;
+        }
+        body {
+            background-color: #2e2e2e;
+            color: #ffffff;
+            font-family: Arial, sans-serif;
+        }
+        .sidebar {
+            background-color: #7b2c33;
+            height: 100vh;
+            padding: 20px;
+            text-align: center;
+        }
+        .sidebar img {
+            border-radius: 50%;
+            width: 100px; 
+            margin-bottom: 30px; 
+        }
+        .sidebar h2 {
+            margin-bottom: 40px;
+            color: #ffffff;
+        }
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+        .sidebar ul li {
+            margin: 20px 0;
+        }
+        .sidebar ul li a {
+            color: #ffffff;
+            text-decoration: none;
+        }
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .social-icons a {
+            margin: 0 10px;
+            color: #ffffff;
+        }
+        .social-icons a img {
+            width: 30px; 
+            height: 30px;
+        }
+        .content {
+            padding: 40px;
+        }
+        .content h2 {
+            color: #ffffff;
+            margin-bottom: 40px;
+        }
+        .content .card {
+            background-color: #3b3b3b;
+            border: none;
+            margin-bottom: 20px;
+        }
+        .content .card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .content .card h4 {
+            color: #ffffff;
+        }
+        .content .card p {
+            color: #cccccc;
+        }
+        .footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #1f1f1f;
+            color: #cccccc;
+        }
+        #thiru
+        {
+            background-image: url("thirubg.jpg");
+        }
+        
+        b
+        {
+            color: rgb(206, 79, 79);
+        }
+        #heading{
+            color: aqua;
+        }
+        body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #000 url('background-image.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #fff;
+    height: 100vh; /* Ensure the body takes up the full viewport height */
+}  
+
+.skills-section {
+    padding: 0; /* Remove padding */
+    text-align: center;
+    margin: 0; /* Ensure no margin at the top */
+    box-sizing: border-box; /* Ensure padding is included in the element's height */
+    height: 100vh; /* Ensure section takes up the full viewport height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center content vertically */
+}
+
+.skills-section h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.skills-section p {
+    font-size: 18px;
+    margin-bottom: 50px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px; /* Add padding to the container */
+}
+
+.skill-box {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    border-radius: 10px;
+    max-width: 100%;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow for better visibility */
+}
+
+.skill-box:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.skill-box h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.skill-box p {
+    font-size: 16px;
+}
+
+.icon {
+    font-size: 50px;
+    margin-bottom: 20px;
+    display: block;
+}
+
+
+
+
+
+html, body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1f1f1f;
+    color: white;
+}
+
+.gallery {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.gallery-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.gallery-header h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.gallery-header p {
+    font-size: 16px;
+    color: #c4c4c4;
+}
+
+.gallery-filters {
+    margin-top: 20px;
+}
+
+.filter-btn {
+    background-color: transparent;
+    border: none;
+    color: #c4c4c4;
+    margin: 0 10px;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.filter-btn.active {
+    color: white;
+    border-bottom: 2px solid white;
+}
+
+.gallery-images {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden; /* Ensures images do not overflow the container */
+    border-radius: 8px;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 200px; /* Set a fixed height for uniformity */
+    object-fit: cover; /* Ensures the image covers the area, cropping as needed */
+    display: block; /* Removes extra space below images */
+}
+
+@media (min-width: 768px) {
+    .gallery-images {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+
+
+
+
+        .contact-section {
+            font-family: Arial, sans-serif;
+            background: url("thiru3bg.jpeg") no-repeat center center fixed;
+            background-size: cover;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+        }
+
+        .contact-section {
+            padding: 60px 0;
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        .contact-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .contact-section p {
+            font-size: 1.1rem;
+            margin-bottom: 40px;
+            text-align: center;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: left;
+        }
+
+        .form-control {
+            background-color: transparent;
+            border: 1px solid #fff;
+            color: #fff;
+            padding: 15px;
+            margin-bottom: 20px;
+        }
+
+        .form-control::placeholder {
+            color: #ddd;
+        }
+
+        .btn-send {
+            background-color: #d9534f;
+            border: none;
+            padding: 15px 30px;
+            color: #fff;
+            font-size: 1rem;
+            text-transform: uppercase;
+            border-radius: 0;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .btn-send:hover {
+            background-color: #c9302c;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container-fluid" id="thiru">
+        <div class="row">
+            <div class="col-md-3 sidebar">
+                <br><br><br>
+                <img src="vignanlogo.jpg" alt="Profile Picture">
+                <h2>VIGNAN</h2>
+                <ul>
+                    <li><a href="#thiru">About Me</a></li>
+                    <li><a href="#ajay" >What I'm good at</a></li>
+                    <li><a href="#sai">My Work</a></li>
+                    <li><a href="#dinesh">Contact Me</a></li>
+                </ul>
+                <div class="social-icons">
+                    <a target="_blank" href="https://www.instagram.com/vignanuniversityofficial/"><img src="facebook.jpg" alt="Facebook"></a>
+                    <a target="_blank" href="https://www.youtube.com/@VignanUniversityAP"><img src="youtube.jpg" alt="Twitter"></a>
+                    <a target="_blank" href="https://www.linkedin.com/search/results/all/?fetchDeterministicClustersOnly=true&heroEntityKey=urn%3Ali%3Aorganization%3A26590834&keywords=vignan%27s%20foundation%20for%20science%2C%20technology%20%26%20research&origin=RICH_QUERY_SUGGESTION&position=0&searchId=53c26739-3713-4d8f-92d6-70373a84d58c&sid=UK!&spellCorrectionEnabled=false"><img src="linkedin.jpg" alt="LinkedIn"></a>
+                    <a target="_blank" href="https://www.instagram.com/vignanuniversityofficial/"><img src="instagram.jpg" alt="Instagram"></a>
+                </div>
+                <p>SCROLL DOWN TO KNOW</p>
+            </div>
+            <div class="col-md-9 content">
+                <h2 id="heading">Vignan University</h2>
+                <p>Established in 2009, Vignan's Foundation for Science, Technology, and Research (VFSTR) University,
+                    (Vignan University) is a Deemed to be University. It is approved by the University Grants 
+                    Commission (UGC), and has been accredited with grade <b>A+</b> by National Assessment and Accreditation Council (NAAC).
+                    <br><br>
+                    Courses offered include Chemical Engineering, Food Technology, agricultural engineering, automobile engineering, 
+                    bioinformatics, biomedical engineering, biotechnology, chemical engineering, civil engineering,<b> COMPUTER SCIENCE AND ENGINEERING</b> ,
+                     electrical & electronics engineering, electronics & communications engineering,
+                     information technology, mechanical engineering, petroleum engineering and textile technology.
+                
+                </p>
+                
+                <div class="card">
+                    <div class="row no-gutters">
+                        <div class="col-md-4">
+                            <img src="Ablock.jpg" class="card-img" alt="Image 1">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h4 class="card-title">A - BLOCK</h4>
+                                <p class="card-text">This block name is <b>VIJAYABHUVANAM</b>. In this block, the Chairman, Vice Chairman, Vice Chancellor, Dean, Examination Cell, and Finance Chambers are located.</p>
+                                <a href="#" class="btn btn-light">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+               
+
+
+
+                <div class="card">
+                    <div class="row no-gutters">
+                        <div class="col-md-4">
+                            <img src="Ublock.jpg" class="card-img" alt="Image 2">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h4 class="card-title">U - BLOCK</h4>
+                                <p class="card-text">This block name is <b>ARYABHATTA BHAVAN</b>. In this block, all students under Mechanical, Civil, BBA, BCA departments for all 4 years are located.</p>
+                                <a href="#" class="btn btn-light">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <section class="skills-section" id="ajay">
+        <div class="container">
+            <h1>What I'm good at?</h1>
+            <p>Curabitur leo felis, rutrum vitae varius eu, malesuada a tortor. Vestibulum congue leo et felis aliquam, eu viverra nulla semper. Nullam eu faucibus diam. Donec eget massa ante.</p>
+            <div class="skills-grid">
+                <div class="skill-box">
+                    <i class="icon"></i>
+                    <h3>HTML5 & CSS3</h3>
+                    <p>Phasellus non convallis dolor. Integer tempor hendrerit eros ut bibendum. Sed sit amet metus vehicula consequat quis eget eros.</p>
+                </div>
+                <div class="skill-box">
+                    <i class="icon"></i>
+                    <h3>Creative Ideas</h3>
+                    <p>Proin lacus massa, sed fermentum in, dignissim et nisl. Nulla lacinia eros sed felis posuere, ultricies faucibus purus mollis.</p>
+                </div>
+                <div class="skill-box">
+                    <i class="icon"></i>
+                    <h3>Easy Customize</h3>
+                    <p>Integer suscipit condimentum aliquet. Nam quis risus metus. Nullam faucibus quam eget pretium tincidunt. Nam libero dui.</p>
+                </div>
+                <div class="skill-box">
+                    <i class="icon"></i>
+                    <h3>Admin Dashboard</h3>
+                    <p>Vivamus et dui mass</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- <div class="footer">
+        <p>THIRUMALA RAO</p>
+    </div> -->
+    <section class="gallery" id="sai">
+        <div class="gallery-header">
+            <h1>My Work</h1>
+            <p>Aenean sollicitudin ex mauris, lobortis lobortis diam euismod sit amet. Duis ac elit vulputate, lobortis arcu quis, vehicula mauris.</p>
+            <div class="gallery-filters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="people">People</button>
+                <button class="filter-btn" data-filter="nature">Nature</button>
+                <button class="filter-btn" data-filter="animals">Animals</button>
+            </div>
+        </div>
+
+        <div class="gallery-images">
+            <div class="gallery-item" data-category="people">
+                <img src="man.jpg" alt="Person standing on rocks">
+            </div>
+            <div class="gallery-item" data-category="nature">
+                <img src="beach.jpg" alt="Lifeguard tower on the beach">
+            </div>
+            <div class="gallery-item" data-category="people">
+                <img src="camera.jpg" alt="Person with a camera in a city">
+            </div>
+            <div class="gallery-item" data-category="people">
+                <img src="build.jpg" alt="Person jumping in front of glass building">
+            </div>
+            <div class="gallery-item" data-category="nature">
+                <img src="snow.jpg" alt="Person standing on a snowy mountain">
+            </div>
+            <div class="gallery-item" data-category="nature">
+                <img src="boat.jpg" alt="Person on a boat">
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <section class="contact-section" id="dinesh">
+        <h2>Contact Me</h2>
+        <p>"Thank you for visiting my website. If you have any questions, comments, or just want to say hello, feel free to get in touch with me using the form below. I look forward to hearing from you!"</p>
+        <div class="contact-form">
+            <form action="#" method="POST">
+                <div class="form-row">
+                    <div class="col-md-6">
+                        <input type="text" class="form-control" placeholder="Your name..." required>
+                    </div>
+                    <div class="col-md-6">
+                        <input type="email" class="form-control" placeholder="Your email..." required>
+                    </div>
+                </div>
+                <input type="text" class="form-control" placeholder="Subject..." required>
+                <textarea class="form-control" rows="5" placeholder="Your message..." required></textarea>
+                <button type="submit" class="btn btn-send">Send Message</button>
+            </form>
+        </div>
+
+    </section>
+
+</body>
+</html>
